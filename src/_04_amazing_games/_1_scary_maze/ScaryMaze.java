@@ -90,7 +90,9 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 						}
 			//13.  If the mouse is on the end color, pop up a message to tell them they won!
 			//    (you will need to get the number of the END COLOR by moving the mouse over it)
-
+			if (mouseColor == -11549705) {
+				JOptionPane.showMessageDialog(null,"you won!");
+			}
 					
 			
 		}	
@@ -106,8 +108,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 			/**********  PLAY A SOUND ***************/
 			//10. Find a scary sound and put it in the _04_amazing_games._1_scary_maze package (where you put your maze picture).
-			
-			//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.		
+			playScarySound("standardScarySound.wav");			//    You can find a sound on freesound.org. Log in as leagueofamazing/code4life.		
 			//11. Play the scary sound. Hint: use the playScarySound method with the name of your sound file		
 
 			
@@ -116,7 +117,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 
 		//    Use the showScaryImage method below and send it the name of your picture file
-		
+		showScaryImage("scaryImage.jpg");
 		
 	}
 	
